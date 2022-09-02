@@ -44,17 +44,3 @@ def extractXMLInfo(_self_):
     infolist.append(takeICMS(info))
     infolist.append(takeIPI(info))
     return(infolist)
-
-ex = extractXMLInfo('DANFE157899.xml')
-dv = extractXMLInfo('DANFE156933.xml')
-cs = extractXMLInfo('DANFE157411.xml')
-print('dv')
-for i in range(1):
-    for each in dv:
-        print(each)
-    print('ex')
-    for each in ex:
-        print(each)
-    print('cs')
-    for each in cs:
-        print(each)
