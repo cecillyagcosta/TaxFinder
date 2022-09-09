@@ -2,20 +2,16 @@ import csv
 from typing import final
 import xmltreatment as xmlt
 import pandas as pd
+import datafold as data
+import logger
 
-def createCSV(_self_):
-    fields = ['Tipo de nota', 'Data', 'No de Nota', 'Item', 'ICMS', 'IPI']
-    rows = [[_self_[0],_self_[2], _self_[1], _self_[3][0], _self_[3][1], _self_[3][2]]]
-    with open('info899.csv', 'w') as file:
-        write = csv.writer(file)
-        write.writerow(fields)
-        write.writerows(rows)
-        file.close()
+path = 'C:/Users/JHGC1/OneDrive/Documents/TaxFinder/TaxFinder/Script/Core/'
 
 info = xmlt.extractXMLInfo('DANFE157899.xml')
-print(info)
-for each in info:
-    print(each)
-createCSV(info)
-df = pd.read_csv('info899.csv')
-df.to_excel('info899.xlsx')
+info2 = xmlt.extractXMLInfo('DANFE157411.xml')
+info3 = xmlt.extractXMLInfo('DANFE156933.xml')
+#df = data.forge(info)
+#df2 = data.forge(info2)
+#df3 = data.forge(info3)
+
+data.trackInvoice(path)

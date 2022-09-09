@@ -18,28 +18,22 @@ def takeIPI(_self_):
 def takenatOp(_self_):
     nat = _self_['nfeProc']['NFe']['infNFe']['ide']['natOp']
     if nat == 'Entrada de mercadoria recebida em consignacao mercantil ou i':
-        return('Devolucao')
+        return('Devolução')
     elif 'Remessa de mercadoria em consignacao mercantil ou industrial':
-        return('Saida')
+        return('Saída')
     else:
         return(nat)
 
 def takeNNF(_self_):
     return(_self_['nfeProc']['NFe']['infNFe']['ide']['nNF'])
 
-def takeAllTaxes(_self_):
-    return(_self_['nfeProc']['NFe']['infNFe']['det'][0])
-
 def extractXMLInfo(_self_):
-    infolist = []
-    itemlist = []
-    index = 0
     with open(_self_) as xmlfile:
         info = xmltodict.parse(xmlfile.read())
         xmlfile.close()
-    infolist.append(takenatOp(info))
-    infolist.append(takeNNF(info))
-    infolist.append(makeFormatedDate(takeDate(info)))
-    infolist.append(takeICMS(info))
-    infolist.append(takeIPI(info))
+    infolist = {"Natureza de Operação":(takenatOp(info)),
+                "Número de Nota Fiscal":(takeNNF(info)),
+                "Data":(makeFormatedDate(takeDate(info))),
+                "ICMS":(takeICMS(info)),
+                "IPI":(takeIPI(info)) }
     return(infolist)
