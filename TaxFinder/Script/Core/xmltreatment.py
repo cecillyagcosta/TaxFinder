@@ -1,4 +1,3 @@
-from typing import final
 import xmltodict
 
 def takeDate(_self_):
