@@ -1,3 +1,4 @@
+from tarfile import TarInfo
 from unittest import skip
 import pandas as pd 
 from datetime import datetime
@@ -35,7 +36,8 @@ def createDirList(_self_):
 def trackInvoice(_self_):
     poplist = createDirList(_self_)
     for each in poplist:
+        print(each)
         if each.endswith('.xml'):
-           targetInfo = xmlt.extractXMLInfo(each)
-           if targetInfo["Natureza de Operação"] == 'Saída' or targetInfo["Natureza de Operação"] == 'Devolução':
-                print()
+           targetInfo = xmlt.extractXMLInfo(f'{_self_}{each}')
+           if targetInfo["Natureza de Operação"] == 'Devolução':
+                forge(targetInfo)
