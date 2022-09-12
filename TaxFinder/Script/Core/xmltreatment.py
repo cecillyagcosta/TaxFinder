@@ -18,10 +18,8 @@ def takeIPI(_self_):
 def takenatOp(_self_):
     nat = _self_['nfeProc']['NFe']['infNFe']['ide']['natOp']
     if nat == 'Entrada de mercadoria recebida em consignacao mercantil ou i':
-        print(nat)
         return('Devolução')
     elif 'Remessa de mercadoria em consignacao mercantil ou industrial':
-        print(nat)
         return('Saída')
     else:
         return(nat)
