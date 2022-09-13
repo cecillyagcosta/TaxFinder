@@ -1,3 +1,4 @@
+from unittest import skip
 import xmltodict
 
 def takeDate(_self_):
@@ -19,10 +20,10 @@ def takenatOp(_self_):
     nat = _self_['nfeProc']['NFe']['infNFe']['ide']['natOp']
     if nat == 'Entrada de mercadoria recebida em consignacao mercantil ou i':
         return('Devolução')
-    elif 'Remessa de mercadoria em consignacao mercantil ou industrial':
+    elif nat == 'Remessa de mercadoria em consignacao mercantil ou industrial':
         return('Saída')
     else:
-        return(nat)
+        print(nat)
 
 def takeNNF(_self_):
     return(_self_['nfeProc']['NFe']['infNFe']['ide']['nNF'])
