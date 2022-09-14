@@ -1,4 +1,7 @@
+from re import A
 from tarfile import TarInfo
+from typing import final
+from unicodedata import decimal
 from unittest import skip
 import pandas as pd 
 from datetime import datetime
@@ -22,7 +25,9 @@ def forge(_self_):
         frame = frame.append(data)
         finalframe = finalframe.append(frame)
         finalframe.set_index("Natureza de Operação", inplace=True)
-        finalframe.to_excel(dataname)
+        #finalframe = finalframe[finalframe['ICMS'] != 0]
+        #finalframe = finalframe[finalframe['IPI'] != 0]
+        finalframe.to_excel(dataname, sheet_name='Notas de hoje')
     else:
         print("Excel não encontrado, criando e loggando.")
         data.set_index("Natureza de Operação", inplace=True)
@@ -39,10 +44,14 @@ def trackInvoice(_self_):
         print(each)
         if each.endswith('.xml'):
             targetInfo = xmlt.extractXMLInfo(f'{_self_}{each}')
-            if targetInfo["Natureza de Operação"] == 'Saída':
+            if targetInfo["Natureza de Operação"] == 'E/S Consignação':
+                print(targetInfo["Natureza de Operação"])
                 forge(targetInfo)
-            elif each == targetInfo["Natureza de Operação"] == 'Devolução':
+            elif targetInfo["Natureza de Operação"] == 'Devolução':
+                print(targetInfo["Natureza de Operação"])
+                forge(targetInfo)
+            elif targetInfo["Natureza de Operação"] == 'Remessa em Comodato':
+                print(targetInfo["Natureza de Operação"])
                 forge(targetInfo)
             else:
-                print("dummy")
-
+                print(f"Natureza desviada. {targetInfo['Natureza de Operação']}")

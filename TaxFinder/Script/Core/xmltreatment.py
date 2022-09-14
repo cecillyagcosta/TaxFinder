@@ -20,21 +20,25 @@ def takenatOp(_self_):
     nat = _self_['nfeProc']['NFe']['infNFe']['ide']['natOp']
     if nat == 'Entrada de mercadoria recebida em consignacao mercantil ou i':
         return('Devolução')
+    elif nat == 'Devolucao de mercadoria remetida em consignacao mercantil ou':
+        return('Devolução')
+    elif nat == 'Remessa de bem por conta de contrato de comodato':
+        return('Remessa em Comodato')
     elif nat == 'Remessa de mercadoria em consignacao mercantil ou industrial':
-        return('Saída')
+        return('E/S Consignação')
     else:
-        print(nat)
+        print(f"Nota desviada. Natureza: {nat}")
 
 def takeNNF(_self_):
     return(_self_['nfeProc']['NFe']['infNFe']['ide']['nNF'])
 
 def extractXMLInfo(_self_):
-    with open(_self_) as xmlfile:
+    with open(_self_, encoding='utf-8', mode='r') as xmlfile:
         info = xmltodict.parse(xmlfile.read())
         xmlfile.close()
     infolist = {"Natureza de Operação":(takenatOp(info)),
                 "Número de Nota Fiscal":(takeNNF(info)),
                 "Data":(makeFormatedDate(takeDate(info))),
-                "ICMS":(takeICMS(info)),
-                "IPI":(takeIPI(info)) }
+                "ICMS":(str(takeICMS(info))),
+                "IPI":str((takeIPI(info))) }
     return(infolist)
