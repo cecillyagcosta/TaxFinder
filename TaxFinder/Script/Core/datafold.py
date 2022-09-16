@@ -9,7 +9,6 @@ from os.path import *
 from os import listdir
 import xmltreatment as xmlt
 
-
 path = 'C:/Users/JHGC1/OneDrive/Documents/TaxFinder/TaxFinder/Script/Core/'
 
 dt = datetime.now()
