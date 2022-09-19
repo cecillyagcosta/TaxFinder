@@ -1,0 +1,10 @@
+Remessa de mercadoria em consignacao mercantil ou industrial
+Entrada de mercadoria recebida em consignacao mercantil ou i
+Remessa de bem por conta de contrato de comodato
+Retorno de bem remetido por conta de contrato de comodato
+Entrada de mercadoria recebida em consignação mercantil ou i
+Remessa em bonificacao, doacao ou brinde
+Remessa de amostra gratis
+Venda de mercadoria adquirida ou recebida de terceiros, que
+Remessa simbolica de mercadoria depositada em armazem geral
+Devolucao de venda de mercadoria adquirida ou recebida de terceiros, que
