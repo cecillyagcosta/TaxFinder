@@ -1,0 +1,28 @@
+Corrigir pontos e vírgolas;
+
+Se a nota estiver zerada de valor, não precisa aparecer;
+
+
+
+Notas que não devem vir:
+
+Remessa em bonificacao, doacao ou brinde >> amostra;
+
+Remessa de amostra gratis >> amostra;
+
+
+Devolução de venda / Venda de mercadoria adquirida ou recebida de terceiros, que >> nota de venda;
+
+Remessa simbolica de mercadoria depositada em armazem geral >> Retorno simbólico;
+
+
+
+Notas que DEVEM vir:
+
+Remessa de bem por conta de contrato de comodato; OK
+
+Remessa de mercadoraria em consignação mercantil ou industrial; OK
+
+Retorno de bem remetido por conta de contrato de comodato; OK
+
+Entrada de mercadoria recebida em consignação mercantil ou i; OK

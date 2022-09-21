@@ -24,6 +24,8 @@ def takenatOp(_self_):
         return('Devolução')
     elif nat == 'Remessa de bem por conta de contrato de comodato':
         return('Remessa em Comodato')
+    elif nat == 'Retorno de bem remetido por conta de contrato de comodato':
+        return('Remessa em Comodato')
     elif nat == 'Remessa de mercadoria em consignacao mercantil ou industrial':
         return('E/S Consignação')
     else:
@@ -37,8 +39,8 @@ def extractXMLInfo(_self_):
         info = xmltodict.parse(xmlfile.read())
         xmlfile.close()
     infolist = {"Natureza de Operação":(takenatOp(info)),
-                "Número de Nota Fiscal":(takeNNF(info)),
+                "Nota Fiscal":(takeNNF(info)),
                 "Data":(makeFormatedDate(takeDate(info))),
-                "ICMS":(str(takeICMS(info))),
-                "IPI":str((takeIPI(info))) }
+                "ICMS":(takeICMS(info)),
+                "IPI":(takeIPI(info)) }
     return(infolist)
