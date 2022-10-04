@@ -1,5 +1,4 @@
 from datetime import datetime
-from time import gmtime
 from os.path import exists
 
 dt = datetime.now()

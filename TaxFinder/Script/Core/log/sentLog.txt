@@ -1,0 +1,9 @@
+---- LOG BEGIN ----
+159193.xml -- Nota registrada || E/S Consignação -- 29-09-2022, 16:54:46 
+159194.xml -- Nota registrada || E/S Consignação -- 29-09-2022, 16:54:46 
+159212.xml -- Nota registrada || E/S Consignação -- 29-09-2022, 16:54:46 
+159214.xml -- Nota registrada || E/S Consignação -- 29-09-2022, 16:54:46 
+159193.xml -- Nota registrada || E/S Consignação -- 30-09-2022, 10:02:32 
+159194.xml -- Nota registrada || E/S Consignação -- 30-09-2022, 10:02:32 
+159212.xml -- Nota registrada || E/S Consignação -- 30-09-2022, 10:02:32 
+159214.xml -- Nota registrada || E/S Consignação -- 30-09-2022, 10:02:32 

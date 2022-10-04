@@ -1,4 +1,3 @@
-from unittest import skip
 import xmltodict
 
 def takeDate(_self_):
@@ -29,7 +28,7 @@ def takenatOp(_self_):
     elif nat == 'Remessa de mercadoria em consignacao mercantil ou industrial':
         return('E/S Consignação')
     else:
-        print(f"Nota desviada. Natureza: {nat}")
+        print(f"Nota Desviada. Natureza: {nat}")
 
 def takeNNF(_self_):
     return(_self_['nfeProc']['NFe']['infNFe']['ide']['nNF'])
