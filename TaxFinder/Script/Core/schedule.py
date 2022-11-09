@@ -8,44 +8,17 @@ from matplotlib.pyplot import get
 dt = datetime.now()
 str_dt = dt.strftime("%d-%m-%Y, %H:%M:%S")
 
-def getDayOfWeek(_self_):
+def workSchedule(_self_):
+    # Mon - Fri, 10:00 PM
     weekdays = ['Monday',
     'Tuesday', 'Wednesday',
     'Thursday', 'Friday',
     'Saturday', 'Sunday']
     today = datetime.weekday(_self_)
-    return(weekdays[today])
-
-def workingDays():
-    currentDay = getDayOfWeek(dt)
-    workDays = ['Monday',
-    'Tuesday', 'Wednesday',
-     'Thursday', 'Friday']
-    for each in workDays:
-        if each == currentDay:
-            print("I should work today!")
-            print(f'Today is {currentDay}')
-        else:
-            print("I shouldn't work today!")
-
-def checkHour(_self_): #Would use str_dt
-    currentHour = _self_.split(',')
-    targetHour = "17:01:00"
-    amIWorking = False
-    if targetHour == currentHour:
-        #it's time to work
-        amIWorking = True
-        return(amIWorking)
+    if today < 5:
+        return()
     else:
-        amIWorking = False
-        return(amIWorking)
-    
-isItWorking = checkHour(str_dt)
+        print("weekend!")
 
-while True:
-    if isItWorking == True:
-        print(isItWorking)
-        break
-   
-    
 
+print(workSchedule(dt))
