@@ -2,11 +2,16 @@ from calendar import week
 from datetime import datetime
 from os.path import exists
 from socket import gethostbyaddr
+import logger
+import time
 
 from matplotlib.pyplot import get
 
-dt = datetime.now()
-str_dt = dt.strftime("%d-%m-%Y, %H:%M:%S")
+
+current = datetime.now()
+targetHour = current.replace(hour=15, minute=48)
+str_dt = current.strftime("%d-%m-%Y, %H:%M:%S")
+willIWork = True
 
 def workSchedule(_self_):
     # Mon - Fri, 10:00 PM
@@ -16,9 +21,34 @@ def workSchedule(_self_):
     'Saturday', 'Sunday']
     today = datetime.weekday(_self_)
     if today < 5:
-        return()
+        if current == targetHour:
+            print(f"deu bom! {weekdays[today]}, {current}")
+        else:
+            print(f"Ainda não! {weekdays[today]}, {current}")
     else:
-        print("weekend!")
+        print("NULL")
+
+def callUp(_self_):
+    if _self_ == "Checking Time":
+        workSchedule(current)
+        print("1")
+        return(callUp("Logging"))
+    
+    elif _self_ == "Logging":
+        print("2")
+        return(callUp("Recalling Method"))
+
+    elif _self_ == "Recalling Method":
+        print("3")
+        return(callUp("Exception - Null - Empty String"))
+
+    elif _self_ == "":
+        print("NULL - Empty String")
+        #logger.makeLog()
+        return(callUp("Checking Time"))
 
 
-print(workSchedule(dt))
+while willIWork:
+    callUp("")
+    print(current)
+    time.sleep(5)
