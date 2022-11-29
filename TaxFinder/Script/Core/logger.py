@@ -4,7 +4,7 @@ from os.path import exists
 dt = datetime.now()
 str_dt = dt.strftime("%d-%m-%Y, %H:%M:%S")
 
-def makeLog(path, _self_, _self1_):
+def makeLog(path, _self_, _self1_):  #path, parâmetro 1, parâmetro 2
     file_exists = exists(path)
     if(file_exists):
         with open(path, 'a') as f:

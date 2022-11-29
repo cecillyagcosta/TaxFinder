@@ -1,19 +1,27 @@
 from base64 import decode
 import pandas as pd 
-from datetime import datetime, timedelta
-from os.path import *
+import datetime
+import os
 import xmltreatment as xmlt
 import logger as log
 import time
 
+import datafold as data
 
-subject = 'C:/Users/joao.costa/OneDrive - HARTMANN BRASIL/Área de Trabalho/test.txt'
+dir = 'C:/Users/joao.costa/Documents/GitHub/TaxFinder/TaxFinder/Script/Core/target/'
+#data.trackInvoice(dir)
+subject = 'C:/Users/joao.costa/Documents/GitHub/TaxFinder/TaxFinder/Script/Core/subject.txt'
+current = datetime.datetime.now()
+subCreation = time.ctime(os.path.getctime(subject))
+subModification = time.ctime(os.path.getmtime(subject))
+#print(subCreation)
+#print(subModification)
 
-current = datetime.now()
-target = current.replace(hour=12, minute=57) #(hour=13, minute=30)
-if current >= target:
-    with open(subject, 'w')as f:
-        f.write(f"deu bom! current: {current} | target: {target}")
-        f.close()
-else:
-    print(f"not yet. {current} | target: {target}")
+def getCreationDate(filepath):
+    return(time.ctime(os.path.getctime(filepath)))
+
+def getModificationDate(filepath):
+    return(time.ctime(os.path.getmtime(filepath)))
+
+a = getCreationDate(subject)
+print(a)

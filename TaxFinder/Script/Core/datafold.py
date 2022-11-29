@@ -10,7 +10,6 @@ forgeLog = 'C:/Users/joao.costa/Documents/GitHub/TaxFinder/TaxFinder/Script/Core
 cuttedLog = 'C:/Users/joao.costa/Documents/GitHub/TaxFinder/TaxFinder/Script/Core/log/cuttedLog.txt'
 sentLog = 'C:/Users/joao.costa/Documents/GitHub/TaxFinder/TaxFinder/Script/Core/log/sentLog.txt'
 invPath = 'N:/NOTAS-FISCAIS/OneDrive - HARTMANN BRASIL/'
-dellLog = 'C:/Users/joao.costa/OneDrive - HARTMANN BRASIL/Documentos/GitHub/TaxFinder/TaxFinder/Script/Core/log/sentLog.txt'
 
 dt = datetime.now()
 str_dt = dt.strftime("%d-%m-%Y")
@@ -43,7 +42,7 @@ def checkSentLog():
         return(True)
     else:
         with open(sentLog, 'w') as f:
-            f.write('---- LOG BEGIN ----/n')
+            f.write('---- LOG BEGIN ----\n')
             f.close()
         return(True)
 

@@ -1,19 +1,25 @@
 from calendar import week
 from datetime import datetime
 from os.path import exists
-from socket import gethostbyaddr
 import logger
 import time
+import datafold as data
 
-from matplotlib.pyplot import get
+path = 'C:/Users/joao.costa/Documents/GitHub/TaxFinder/TaxFinder/Script/Core/'
+onedrivePath = 'N:/NOTAS-FISCAIS/OneDrive - HARTMANN BRASIL/Conferência de Imposto/'
+invPath = 'Y:/TaxPlus/NFe/Produção/Visualizar XML/'
+examplePath = 'C:/Users/joao.costa/Documents/GitHub/TaxFinder/TaxFinder/Script/Core/target/'
+log = 'C:/Users/joao.costa/Documents/GitHub/TaxFinder/TaxFinder/Script/Core/log.txt'
 
+def getTime():
+    return(datetime.now())
 
-current = datetime.now()
-targetHour = current.replace(hour=15, minute=48)
-str_dt = current.strftime("%d-%m-%Y, %H:%M:%S")
+str_dt = getTime().strftime("%d-%m-%Y, %H:%M:%S")
 willIWork = True
 
 def workSchedule(_self_):
+    current = getTime()
+    targetHour = current.replace(hour=21, minute=59, second=59)
     # Mon - Fri, 10:00 PM
     weekdays = ['Monday',
     'Tuesday', 'Wednesday',
@@ -22,33 +28,11 @@ def workSchedule(_self_):
     today = datetime.weekday(_self_)
     if today < 5:
         if current == targetHour:
-            print(f"deu bom! {weekdays[today]}, {current}")
+            data.trackInvoice(examplePath)
+            return(True)
         else:
-            print(f"Ainda não! {weekdays[today]}, {current}")
+            print(f"not yet. {weekdays[today]}, {current} || target: {targetHour}: Next cycle in: {targetHour - current}")
+            return(False)
     else:
-        print("NULL")
+        return(False)
 
-def callUp(_self_):
-    if _self_ == "Checking Time":
-        workSchedule(current)
-        print("1")
-        return(callUp("Logging"))
-    
-    elif _self_ == "Logging":
-        print("2")
-        return(callUp("Recalling Method"))
-
-    elif _self_ == "Recalling Method":
-        print("3")
-        return(callUp("Exception - Null - Empty String"))
-
-    elif _self_ == "":
-        print("NULL - Empty String")
-        #logger.makeLog()
-        return(callUp("Checking Time"))
-
-
-while willIWork:
-    callUp("")
-    print(current)
-    time.sleep(5)

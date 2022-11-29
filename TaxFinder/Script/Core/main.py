@@ -2,39 +2,35 @@ import datafold as data
 import schedule as sch
 import time
 import datetime
+import logger
 
-path = 'C:/Users/joao.costa/Documents/GitHub/TaxFinder/TaxFinder/Script/Core/'
-isolated = 'C:/Users/joao.costa/Documents/GitHub/TaxFinder/TaxFinder/Script/Core/isolated/'
-target = 'C:/Users/joao.costa/Documents/GitHub/TaxFinder/TaxFinder/Script/Core/target/'
-subject = 'N:/NOTAS-FISCAIS/OneDrive - HARTMANN BRASIL/NFE - Fiscal/'
-log = 'C:/Users/joao.costa/Documents/GitHub/TaxFinder/TaxFinder/Script/Core/log/sentLog.txt'
-targetDell = 'C:/Users/joao.costa/OneDrive - HARTMANN BRASIL/Documentos/GitHub/TaxFinder/TaxFinder/Script/Core/target/'
-current = datetime.datetime.now()
-workTime = current.replace(hour=22)
-willIWork = True
-data.trackInvoice(targetDell)
-
+log = 'C:/Users/joao.costa/Documents/GitHub/TaxFinder/TaxFinder/Script/Core/log/Mainlog.txt'
 
 def callUp(_self_):
     if _self_ == "Checking Time":
-        sch.workSchedule(current)
-        print("1")
-        return(callUp("Logging"))
-    
-    elif _self_ == "Logging":
-        print("2")
-        return(callUp("Recalling Method"))
+        print(f"Checking time on {sch.getTime()}")
+        if sch.workSchedule(sch.getTime()) == True:
+            logger.makeLog(log, "Checking Time -- Trigged", f"{sch.getTime()}")
+            return(callUp("Recalling method"))
+        else:
+            logger.makeLog(log, "Checking Time -- not trigged", f"{sch.getTime()}")
+            return(callUp("Recalling method"))
 
     elif _self_ == "Recalling Method":
-        print("3")
-        return(callUp("Exception - Null - Empty String"))
+        print(f"Recalling method on {sch.getTime()}")
+        logger.makeLog(log, "Recalling method", f"{sch.getTime()}")
+        return(callUp("Moving files"))
 
-    elif _self_ == "":
-        print("NULL - Empty String")
-        #logger.makeLog()
+    elif _self_ == "Moving files":
+        print(f"Moving files on {sch.getTime()}")
+        logger.makeLog(log, "Recalling method", f"{sch.getTime()}")
         return(callUp("Checking Time"))
 
-while willIWork:
-    callUp("")
-    print(current)
-    time.sleep(5)
+    elif _self_ == "Cycle":
+        logger.makeLog(log, "Starting cycle on", f"{sch.getTime()}")
+        return(callUp("Checking Time"))
+
+while True:
+        callUp("Cycle")
+        print(sch.getTime())
+        time.sleep(1)
