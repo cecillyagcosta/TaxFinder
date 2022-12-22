@@ -166,3 +166,69 @@
 162546.xml -- Nota registrada || E/S Consignação -- 16-12-2022, 12:23:10 
 162578.xml -- Nota registrada || E/S Consignação -- 16-12-2022, 12:23:10 
 162593.xml -- Nota registrada || E/S Consignação -- 16-12-2022, 12:23:10 
+162601.xml -- Nota registrada || E/S Consignação -- 16-12-2022, 12:23:10 
+162610.xml -- Nota registrada || E/S Consignação -- 16-12-2022, 12:23:10 
+162654.xml -- Nota registrada || E/S Consignação -- 16-12-2022, 12:23:10 
+153867.xml -- Nota registrada || E/S Consignação -- 20-12-2022, 09:21:41 
+153934.xml -- Nota registrada || E/S Consignação -- 20-12-2022, 09:21:41 
+153958.xml -- Nota registrada || E/S Consignação -- 20-12-2022, 09:21:41 
+153959.xml -- Nota registrada || E/S Consignação -- 20-12-2022, 09:21:41 
+153960.xml -- Nota registrada || E/S Consignação -- 20-12-2022, 09:21:41 
+153962.xml -- Nota registrada || E/S Consignação -- 20-12-2022, 09:21:41 
+153964.xml -- Nota registrada || E/S Consignação -- 20-12-2022, 09:21:41 
+154008.xml -- Nota registrada || E/S Consignação -- 20-12-2022, 09:21:41 
+154071.xml -- Nota registrada || E/S Consignação -- 20-12-2022, 09:21:41 
+154082.xml -- Nota registrada || E/S Consignação -- 20-12-2022, 09:21:41 
+154084.xml -- Nota registrada || Remessa em Comodato -- 20-12-2022, 09:21:41 
+154101.xml -- Nota registrada || E/S Consignação -- 20-12-2022, 09:21:41 
+154130.xml -- Nota registrada || Devolução -- 20-12-2022, 09:21:41 
+154131.xml -- Nota registrada || Devolução -- 20-12-2022, 09:21:41 
+154134.xml -- Nota registrada || Devolução -- 20-12-2022, 09:21:41 
+154136.xml -- Nota registrada || Devolução -- 20-12-2022, 09:21:41 
+154143.xml -- Nota registrada || Devolução -- 20-12-2022, 09:21:41 
+154144.xml -- Nota registrada || Devolução -- 20-12-2022, 09:21:41 
+154147.xml -- Nota registrada || E/S Consignação -- 20-12-2022, 09:21:41 
+154150.xml -- Nota registrada || E/S Consignação -- 20-12-2022, 09:21:41 
+154153.xml -- Nota registrada || E/S Consignação -- 20-12-2022, 09:21:41 
+154157.xml -- Nota registrada || Remessa em Comodato -- 20-12-2022, 09:21:41 
+154176.xml -- Nota registrada || E/S Consignação -- 20-12-2022, 09:21:41 
+154204.xml -- Nota registrada || E/S Consignação -- 20-12-2022, 09:21:41 
+154209.xml -- Nota registrada || Remessa em Comodato -- 20-12-2022, 09:21:41 
+154241.xml -- Nota registrada || E/S Consignação -- 20-12-2022, 09:21:41 
+154243.xml -- Nota registrada || E/S Consignação -- 20-12-2022, 09:21:41 
+154244.xml -- Nota registrada || Devolução -- 20-12-2022, 09:21:41 
+154245.xml -- Nota registrada || Devolução -- 20-12-2022, 09:21:41 
+154362.xml -- Nota registrada || Devolução -- 20-12-2022, 09:21:41 
+154363.xml -- Nota registrada || Devolução -- 20-12-2022, 09:21:41 
+154365.xml -- Nota registrada || Devolução -- 20-12-2022, 09:21:41 
+154366.xml -- Nota registrada || Devolução -- 20-12-2022, 09:21:41 
+154367.xml -- Nota registrada || Devolução -- 20-12-2022, 09:21:41 
+154373.xml -- Nota registrada || E/S Consignação -- 20-12-2022, 09:21:41 
+154377.xml -- Nota registrada || E/S Consignação -- 20-12-2022, 09:21:41 
+154378.xml -- Nota registrada || E/S Consignação -- 20-12-2022, 09:21:41 
+154379.xml -- Nota registrada || E/S Consignação -- 20-12-2022, 09:21:41 
+154382.xml -- Nota registrada || E/S Consignação -- 20-12-2022, 09:21:41 
+154397.xml -- Nota registrada || E/S Consignação -- 20-12-2022, 09:21:41 
+154437.xml -- Nota registrada || E/S Consignação -- 20-12-2022, 09:21:41 
+154442.xml -- Nota registrada || E/S Consignação -- 20-12-2022, 09:21:41 
+154476.xml -- Nota registrada || Devolução -- 20-12-2022, 09:21:41 
+162601.xml -- Nota registrada || E/S Consignação -- 20-12-2022, 11:05:15 
+162610.xml -- Nota registrada || E/S Consignação -- 20-12-2022, 11:05:15 
+162654.xml -- Nota registrada || E/S Consignação -- 20-12-2022, 11:05:15 
+162659.xml -- Nota registrada || E/S Consignação -- 20-12-2022, 11:09:34 
+162716.xml -- Nota registrada || E/S Consignação -- 20-12-2022, 11:09:34 
+162719.xml -- Nota registrada || E/S Consignação -- 20-12-2022, 11:09:34 
+162721.xml -- Nota registrada || E/S Consignação -- 20-12-2022, 11:09:34 
+162747.xml -- Nota registrada || E/S Consignação -- 20-12-2022, 11:09:34 
+162756.xml -- Nota registrada || E/S Consignação -- 20-12-2022, 11:09:34 
+162757.xml -- Nota registrada || E/S Consignação -- 20-12-2022, 11:09:34 
+162758.xml -- Nota registrada || E/S Consignação -- 20-12-2022, 11:09:34 
+162761.xml -- Nota registrada || E/S Consignação -- 20-12-2022, 11:09:34 
+162716.xml -- Nota registrada || E/S Consignação -- 22-12-2022, 09:17:27 
+162719.xml -- Nota registrada || E/S Consignação -- 22-12-2022, 09:17:27 
+162721.xml -- Nota registrada || E/S Consignação -- 22-12-2022, 09:17:27 
+162747.xml -- Nota registrada || E/S Consignação -- 22-12-2022, 09:17:27 
+162756.xml -- Nota registrada || E/S Consignação -- 22-12-2022, 09:17:27 
+162757.xml -- Nota registrada || E/S Consignação -- 22-12-2022, 09:17:27 
+162758.xml -- Nota registrada || E/S Consignação -- 22-12-2022, 09:17:27 
+162761.xml -- Nota registrada || E/S Consignação -- 22-12-2022, 09:17:27 

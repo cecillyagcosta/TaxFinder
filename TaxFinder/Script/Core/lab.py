@@ -12,11 +12,7 @@ dir = 'C:/Users/joao.costa/Documents/GitHub/TaxFinder/TaxFinder/Script/Core/targ
 #data.trackInvoice(dir)
 subject = 'C:/Users/joao.costa/Documents/GitHub/TaxFinder/TaxFinder/Script/Core/subject.txt'
 test1 = 'C:/Users/joao.costa/Documents/GitHub/TaxFinder/TaxFinder/Script/Core/target/'
-say = sch.getCreationDate(subject)
-me = sch.getDateFromRaw()
-print(say)
-print(me)
-dirlist = fsp.createList(test1)
 
-data.trackInvoice(test1)
-print("etevaldo")
+date = sch.getDateFromRaw()
+newdate = date.replace(date, "19/Dec/2022")
+print(newdate)

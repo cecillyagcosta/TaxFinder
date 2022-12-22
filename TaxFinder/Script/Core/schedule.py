@@ -41,7 +41,7 @@ str_dt = getTimeFromDate().strftime("%d-%m-%Y, %H:%M:%S")
 
 def workSchedule(_self_):
     current = getTimeFromDate()
-    targetHour = current.replace(hour=22, minute=0, second=0)
+    targetHour = current.replace(hour=21, minute=59, second=59)
     # Mon - Fri, 10:00 PM
     weekdays = ['Monday',
     'Tuesday', 'Wednesday',

@@ -16,8 +16,9 @@ def createList(_self_):
 
 def copyTodayFiles(_self_):
     dir = createList(_self_)
+    currentDate = sch.getDateFromRaw() #.replace(currentDate, "21/Dec/2022")
     for each in dir:
-        if sch.getCreationDate(f"{_self_}{each}") == sch.getDateFromRaw() and each.endswith(".xml"):
+        if sch.getCreationDate(f"{_self_}{each}") == currentDate and each.endswith(".xml"):
             shutil.copyfile(f"{_self_}{each}", f"{Tempdir}{each}")
             print(f"{each} was copied successfully. ")
         else:
