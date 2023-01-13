@@ -15,19 +15,18 @@ def callUp(_self_):
             logger.makeLog(log, "Checking Time -- Trigged", f"{sch.getTimeFromDate()}")
             return(callUp("Recalling method"))
         else:
-            logger.makeLog(log, "Checking Time -- not trigged", f"{sch.getTimeFromDate()}")
             return(callUp("Recalling method"))
-
     elif _self_ == "Recalling Method":
         print(f"Recalling method on {sch.getTimeFromDate()}")
-        logger.makeLog(log, "Recalling method", f"{sch.getTimeFromDate()}")
         return(callUp("Checking Time"))
 
     elif _self_ == "Cycle":
-        logger.makeLog(log, "Starting cycle on", f"{sch.getTimeFromDate()}")
         return(callUp("Checking Time"))
 
-while True:
+try:
+    while True:
         callUp("Cycle")
         print(sch.getTimeFromDate())
         time.sleep(1)
+except:
+    print("erro!")

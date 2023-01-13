@@ -5,17 +5,15 @@ from os.path import *
 from os import listdir
 import xmltreatment as xmlt
 import logger as log
+import schedule as sch
 
 forgeLog = 'C:/Users/joao.costa/Documents/GitHub/TaxFinder/TaxFinder/Script/Core/log/forgeLog.txt'
 cuttedLog = 'C:/Users/joao.costa/Documents/GitHub/TaxFinder/TaxFinder/Script/Core/log/cuttedLog.txt'
 sentLog = 'C:/Users/joao.costa/Documents/GitHub/TaxFinder/TaxFinder/Script/Core/log/sentLog.txt'
 invPath = 'N:/NOTAS-FISCAIS/OneDrive - HARTMANN BRASIL/'
 
-dt = datetime.now()
-str_dt = dt.strftime("%d-%m-%Y")
-
 def forge(_self_):
-    dataname = f'Notas {str_dt}.xlsx'
+    dataname = f'Notas {sch.getFormatedDate()}.xlsx'
     data = pd.DataFrame.from_dict([_self_])
     if exists(dataname):
         print("Excel encontrado, loggando.")
@@ -25,7 +23,7 @@ def forge(_self_):
         frame = frame.append(data)
         finalframe = finalframe.append(frame)
         finalframe.set_index("Natureza de Operação", inplace=True)
-        finalframe.to_excel(dataname, sheet_name='Notas de hoje')
+        finalframe.to_excel(dataname, sheet_name='Notas')
     else:
         print("Excel não encontrado, criando e loggando.")
         log.makeLog(forgeLog, _self_['Nota Fiscal'], 'Criação') #ForgeLog

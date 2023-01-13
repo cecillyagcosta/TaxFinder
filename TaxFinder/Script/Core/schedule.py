@@ -27,6 +27,10 @@ def getDateFromRaw():
     finaldate = f"{date[2]}/{date[1]}/{date[4]}"
     return(finaldate)
 
+def getFormatedDate():
+    date = getTimeFromDate()
+    return(date.strftime("%d-%m-%Y"))
+
 def getCreationDate(filepath):
     date = time.ctime(os.path.getctime(filepath)).split()
     finaldate = f"{date[2]}/{date[1]}/{date[4]}"
@@ -41,7 +45,7 @@ str_dt = getTimeFromDate().strftime("%d-%m-%Y, %H:%M:%S")
 
 def workSchedule(_self_):
     current = getTimeFromDate()
-    targetHour = current.replace(hour=21, minute=59, second=59)
+    targetHour = current.replace(hour=22, minute=0, second=0)
     # Mon - Fri, 10:00 PM
     weekdays = ['Monday',
     'Tuesday', 'Wednesday',
@@ -57,7 +61,7 @@ def workSchedule(_self_):
             fsp.moveExcelToDir(corePath)
             return(True)
         else:
-            print(f"Not yet. Next cycle in: {targetHour - current}")
+            print(f"Next cycle in: {targetHour - current}")
             return(False)
     else:
         return(False)

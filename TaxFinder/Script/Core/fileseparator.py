@@ -22,7 +22,7 @@ def copyTodayFiles(_self_):
             shutil.copyfile(f"{_self_}{each}", f"{Tempdir}{each}")
             print(f"{each} was copied successfully. ")
         else:
-            print(f"The file {each}({sch.getCreationDate(f'{_self_}{each}')}) is not on the target date ({sch.getDateFromRaw()}).")
+            print(f"The file {each}({sch.getCreationDate(f'{_self_}{each}')}) is not on the target date ({currentDate}).")
 
 def moveExcelToDir(_self_):
     destPath = 'N:/NOTAS-FISCAIS/OneDrive - HARTMANN BRASIL/Conferência de Imposto/'

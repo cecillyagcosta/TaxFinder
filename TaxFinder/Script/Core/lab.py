@@ -1,6 +1,7 @@
 from base64 import decode
 import pandas as pd 
 import datetime
+from datetime import datetime
 import os
 import xmltreatment as xmlt
 import logger as log
@@ -13,6 +14,5 @@ dir = 'C:/Users/joao.costa/Documents/GitHub/TaxFinder/TaxFinder/Script/Core/targ
 subject = 'C:/Users/joao.costa/Documents/GitHub/TaxFinder/TaxFinder/Script/Core/subject.txt'
 test1 = 'C:/Users/joao.costa/Documents/GitHub/TaxFinder/TaxFinder/Script/Core/target/'
 
-date = sch.getDateFromRaw()
-newdate = date.replace(date, "19/Dec/2022")
-print(newdate)
+test = sch.getFormatedDate()
+print(test)
